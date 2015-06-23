@@ -17,6 +17,7 @@ call vundle#begin() 						 " initialize
 	Plugin 'miyakogi/conoline.vim'			 " highlight current editing line
 	Plugin 'luochen1990/rainbow'			 " rainbow parentheses
 	Plugin 'jnurmine/Zenburn'				 " Zenburn colorscheme
+	Plugin 'guns/xterm-color-table.vim'
 call vundle#end()            				 " required all of your Plugins must be added before the following line
 filetype plugin indent on    				" set indent on plugin, required for Vundle
 
@@ -29,7 +30,7 @@ set tabstop=4     							" a tab is four spaces
 set backspace=indent,eol,start				" allow backspacing over everything in insert mode
 set autoindent    							" always set autoindenting on
 set copyindent    							" copy the previous indentation on autoindenting
-set relativenumber        							" always show line numbers
+set relativenumber        					" relative line numbers
 set shiftwidth=4  							" number of spaces to use for autoindenting
 set shiftround    							" use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     							" set show matching parenthesis
@@ -42,11 +43,19 @@ set mouse=a									" activate mouse support
 set t_ut=									" disable Background Color Erase
 set ruler
 set ttyfast
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+
 " Disable Arrow keys in favor of hjkl
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop> 
+nnoremap j gj
+nnoremap k gk
 " Map Leader key to SpaceBar
 let mapleader=" "
 
