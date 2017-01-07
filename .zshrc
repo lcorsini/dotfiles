@@ -1,7 +1,7 @@
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 
-export ZSH=/Users/lucac81/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -11,7 +11,7 @@ export ZSH=/Users/lucac81/.oh-my-zsh
 
 POWERLEVEL9K_MODE='nerdfont-fontconfig'
 #POWERLEVEL9K_HOME_ICON=$'\uF286 '
-POWERLEVEL9K_LINUX_ICON=$'\uF300 '
+POWERLEVEL9K_LINUX_ICON=$'\uF30C '
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv os_icon dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history ram)
@@ -79,6 +79,8 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export LANGAUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -104,5 +106,5 @@ export EDITOR='vim'
 #eval "$(thefuck --alias)"
 alias mc="SHELL=/bin/bash mc"
 
-source /usr/local/bin/virtualenvwrapper.sh
-alias config='/usr/bin/git --git-dir=/Users/lucac81/.dotfiles/ --work-tree=/Users/lucac81'
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
